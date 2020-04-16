@@ -1,5 +1,5 @@
-//callback : a function that is passed to another function as argument
-//that will be called in future;
+// callback : a function that is passed to another function as argument
+// that will be called in future;
 
 setTimeout(() => {
     console.log('2 second are up');
@@ -52,6 +52,19 @@ const geoCode = async(adress,callback)=>{
 
 geoCode('londres',(data)=>{
     console.log(data);
+})
+
+
+function sum(firstValue,secondValue,func){
+
+    setTimeout(() => {
+        func(firstValue+secondValue);
+    }, 2000);
+
+};
+
+sum(1,4,(sum)=>{
+    console.log(sum); //shoud print 5
 })
 
 
